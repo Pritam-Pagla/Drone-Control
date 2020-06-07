@@ -1,0 +1,26 @@
+body{
+  background-color: #333;
+  color: 'black';
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin:0;
+}
+#canvasL{
+  background: #f0f0f0;
+  border-radius: 5x
+}
+#canvasM{
+  background: #f0f0f0;
+  border-radius: 5px
+}
+#canvasR{
+  background: #f0f0f0;
+  border-radius: 5px
+}
+
+#source{
+  display: none;
+}
