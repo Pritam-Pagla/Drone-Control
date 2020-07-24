@@ -90,24 +90,24 @@ void loop() {
 
 void ThrottleEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length){
   if (type == WStype_TEXT){
-      throttle_Val = (int16_t)strtol((const char*) &payload[0], NULL, 10);
+      throttle_Val = map((int16_t)strtol((const char*) &payload[0], NULL, 10), 0, 390, 0, 100);
   }
 }
 
 void YawEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length){
   if (type == WStype_TEXT){
-      yaw_Val = (int16_t)strtol((const char*) &payload[0], NULL, 10);
+      yaw_Val = map((int16_t)strtol((const char*) &payload[0], NULL, 10), -195, 195, -100, 100);
   }
 }
 
 void RollEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length){
   if (type == WStype_TEXT){
-      roll_Val = (int16_t)strtol((const char*) &payload[0], NULL, 10);
+      roll_Val = map((int16_t)strtol((const char*) &payload[0], NULL, 10), -195, 195, -100, 100);
   }
 }
 
 void PitchEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length){
   if (type == WStype_TEXT){
-      pitch_Val = (int16_t)strtol((const char*) &payload[0], NULL, 10);
+      pitch_Val = map((int16_t)strtol((const char*) &payload[0], NULL, 10), -195, 195, -100, 100);
   }
 }
